@@ -1,0 +1,18 @@
+The following file shows details on the steps taken in creating our model.
+
+We used SVM for our model creation.
+SVM (Support vector machines) are a set of supervised learning methods used for 
+classification, regression, and outliers detection. All of these are common tasks in machine learning.
+
+We steps we followed for model creation are:
+
+1. Import the dataset
+2. Explore the data to figure out what they look like
+3. Pre-process the data
+4. Split the data into attributes and labels
+5. Divide the data into training and testing sets
+6. Train the SVM algorithm
+7. Make some predictions
+8. Evaluate the results of the algorithm
+9. Create Confusion Matrix
+10. Tune the model
