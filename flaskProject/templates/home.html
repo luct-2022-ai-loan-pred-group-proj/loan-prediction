@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+	<header>
+		<div class="container">
+            <div id="brandname">
+                Loan approval
+            </div>
+	    </div>
+	</header>
+
+	<div class="ml-container">
+		<form action="{{ url_for('predict')}}" method="POST">
+            <p>Enter Details Here</p>
+            <!-- <input type="text" name="comment"/> -->
+            <label >Gender</label>
+            <br/>
+            <select name="Gender">
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+            <br/>
+            <label >Marital Status</label>
+            <br/>
+            <select name="Marital_Status">
+                <option value="1">Married</option>
+                <option value="0">Not Married</option>
+            </select>
+            <br/>
+            <label >Dependents</label>
+            <br/>
+            <select name="Dependents">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3+</option>
+            </select>
+            <br/>
+            <label >Education</label>
+            <br/>
+            <select name="Education">
+                <option value="1">Graduate</option>
+                <option value="0">Not Graduate</option>
+            </select>
+            <br/>
+            <label >Self Employed</label>
+            <br/>
+            <select name="Self_Employed">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            <br/>
+            <label >Applicant Income</label>
+            <br/>
+            <input name="ApplicantIncome" type="number"></input>
+            <br/>
+            <label >Coapplicant Income</label>
+            <br/>
+            <input name="CoapplicantIncome" type="number"></input>
+            <br/>
+            <label >Loan Amount</label>
+            <br/>
+            <input name="LoanAmount" type="number"></input>
+            <br/>
+            <label >Loan Amount Term</label>
+            <br/>
+            <select name="Loan_Amount_Term">
+                <option value="60">2 months</option>
+                <option value="180">6 months</option>
+                <option value="240">8 months</option>
+                <option value="360">1 year</option>
+                <option value="480">16 months</option>
+            </select>
+            <br/>
+            <label >Credit History</label>
+            <br/>
+            <select name="Credit_History">
+                <option value="1">1.0</option>
+                <option value="0">0.0</option>
+            </select>
+            <br/>
+            <label >Property Area</label>
+            <br/>
+            <select name="Property_Area">
+                <option value="0">Rural</option>
+                <option value="1">Semiurban</option>
+                <option value="2">Urban</option>
+            </select>
+            <br/>
+
+            <input type="submit" class="btn-info" value="Predict Loan">
+        </form>
+	</div>
+</body>
+</html>

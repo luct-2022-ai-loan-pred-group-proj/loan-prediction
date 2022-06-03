@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h2 tyle="text-align: center;">
+                    Loan approval App
+                </h2>
+            </div>
+        </header>
+        <p style="color:blue;font-size:20px;text-align: center;"><b>Results for loan</b></p>
+        <div class="results" style="text-align: center;">
+            {% if prediction == 1%}
+            <h2 style="color:blue;">You are eligible for loan</h2>
+            {% elif prediction == 0%}
+            <h2 style="color:red;">You cannot take loan</h2>
+            {% endif %}
+        </div>
+    </body>
+</html>
